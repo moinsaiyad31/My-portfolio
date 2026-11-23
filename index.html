@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Moinuddin Saiyed — Computer Engineering Student at JG University & Operations Associate. Practical experience in Store Management, Inventory Operations, Customer Support and Software Development.">
+  <meta name="keywords" content="Moinuddin Saiyed, JG University, Computer Engineering, Store Management, Operations Associate, Portfolio, Ahmedabad, Gujarat">
+  <meta name="author" content="Moinuddin Saiyed">
+  <meta name="theme-color" content="#142B49">
+  
+  <title>Moinuddin Saiyed | Computer Engineering Student & Operations Associate</title>
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='navy' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23142B49'/><stop offset='100%' stop-color='%234A90E2'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23navy)'/><text x='50%' y='64%' font-size='44' font-family='sans-serif' font-weight='800' fill='%23FFFFFF' text-anchor='middle'>MS</text></svg>">
+  
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Confetti Canvas for Form Submission -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Ambient Background Decorators -->
+  <div class="ambient-mesh"></div>
+  <div class="ambient-orb orb-1"></div>
+  <div class="ambient-orb orb-2"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR (Sticky, Glassmorphic, Responsive)
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      
+      <!-- Logo / Name -->
+      <a href="#home" class="brand-logo" aria-label="Moinuddin Saiyed Home">
+        <div class="logo-icon">MS</div>
+        <div class="brand-info">
+          <span class="brand-name">Moinuddin Saiyed</span>
+          <span class="brand-subtitle">JG University • CE & Ops</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & CTA) -->
+      <div class="nav-actions">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button id="theme-toggle-btn" class="theme-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg id="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg id="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 640px){ display: inline-flex; }">
+          <span>Let's Connect</span>
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-nav" class="mobile-nav">
+      <a href="#home" class="mobile-nav-link active">Home</a>
+      <a href="#about" class="mobile-nav-link">About Me</a>
+      <a href="#education" class="mobile-nav-link">Education</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Content -->
+          <div class="hero-content">
+            
+            <!-- Location Badge -->
+            <div class="location-tag">
+              <span class="live-beacon"></span>
+              <span>JG University • Vatva, Ahmedabad, Gujarat, India</span>
+            </div>
+
+            <!-- Name -->
+            <h1 class="hero-name">Moinuddin Saiyed</h1>
+
+            <!-- Animated Typing Text -->
+            <div class="typing-container">
+              <span id="typing-text"></span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <!-- Exact Introduction Text -->
+            <div class="hero-intro-card">
+              <p class="hero-intro-text">
+                "Hello! I am Moinuddin Saiyed, currently pursuing B.Tech in Computer Engineering at JG University. I have practical experience in store management, inventory operations, customer relationship management and business coordination. I am passionate about technology, programming, problem-solving and building innovative digital solutions."
+              </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hero-cta-group">
+              <button class="btn btn-primary download-cv-btn" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download My CV</span>
+              </button>
+
+              <a href="#contact" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Let's Connect</span>
+              </a>
+            </div>
+
+            <!-- Social Links Strip -->
+            <div class="hero-socials">
+              <span class="social-label">Official Links:</span>
+              <div class="social-icons">
+                <a href="https://linkedin.com/in/moinuddin-saiyed" target="_blank" rel="noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                <a href="https://github.com/moinsaiyad31" target="_blank" rel="noreferrer" class="social-link" title="GitHub Profile (@moinsaiyad31)" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+                <a href="mailto:moinuddinsaiyed.official@gmail.com" class="social-link" title="Email Moinuddin Saiyed" aria-label="Email">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Profile Card -->
+          <div class="hero-visual">
+            <div class="visual-card">
+              
+              <!-- Floating Badge 1 -->
+              <div class="floating-badge badge-top">
+                <div class="badge-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <div style="text-align: left;">
+                  <div class="badge-label">Undergraduate</div>
+                  <div class="badge-value">JG University</div>
+                </div>
+              </div>
+
+              <!-- Profile Avatar (Bespoke Executive Monogram) -->
+              <div class="photo-wrapper">
+                <div class="profile-monogram-avatar" aria-label="Moinuddin Saiyed Profile Avatar">
+                  <!-- Decorative Vector Orbit Rings -->
+                  <svg class="avatar-orbit-bg" viewBox="0 0 200 200" fill="none">
+                    <circle cx="100" cy="100" r="85" stroke="#4A90E2" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
+                    <circle cx="100" cy="100" r="65" stroke="#FFFFFF" stroke-width="1" opacity="0.4"/>
+                    <circle cx="100" cy="100" r="45" stroke="#4A90E2" stroke-width="1.5" opacity="0.5"/>
+                    <path d="M25 100 H175 M100 25 V175" stroke="#4A90E2" stroke-width="0.8" opacity="0.25"/>
+                  </svg>
+                  <span class="avatar-initials-large">MS</span>
+                  <span class="avatar-title-label">Moinuddin Saiyed</span>
+                </div>
+                <div class="photo-status">
+                  <span class="live-beacon" style="width: 6px; height: 6px;"></span>
+                  <span>Active Student & Ops</span>
+                </div>
+              </div>
+
+              <h2 class="visual-name">Moinuddin Saiyed</h2>
+              <p class="visual-title">Computer Engineering & Operations Associate</p>
+
+              <div class="visual-chips">
+                <div class="visual-chip">
+                  <span class="chip-title">Store Operations</span>
+                  <span class="chip-sub">Inventory & CRM</span>
+                </div>
+                <div class="visual-chip">
+                  <span class="chip-title">Software & Web</span>
+                  <span class="chip-sub">C++, Python & JS</span>
+                </div>
+              </div>
+
+              <!-- Floating Badge 2 -->
+              <div class="floating-badge badge-bottom">
+                <div class="badge-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <div style="text-align: left;">
+                  <div class="badge-label">Practical Background</div>
+                  <div class="badge-value">Store Management</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">Profile Overview</div>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            An engineering undergraduate with a rare blend of computational problem-solving and hands-on commercial store management experience.
+          </p>
+        </div>
+
+        <!-- Detailed Bio Grid -->
+        <div class="about-grid">
+          
+          <div class="about-card">
+            <h3>Bridging Computational Logic with Practical Business Operations</h3>
+            <p>
+              I am an ambitious Computer Engineering student at JG University who believes that exceptional software starts with deep operational empathy. While mastering core computer engineering concepts like data structures, algorithms, databases, and programming languages, I have simultaneously gained invaluable practical experience on the ground.
+            </p>
+            <p>
+              Through real-world responsibilities in store management and operations, I have handled daily inventory auditing, stock replenishment, vendor negotiations, and customer relationship management (CRM). This hands-on background teaches me how businesses truly operate, allowing me to approach software development not just as writing code, but as building practical digital solutions that streamline processes, reduce costs, and delight users.
+            </p>
+            <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+              <a href="#contact" class="btn btn-primary btn-sm">Let's Discuss Opportunities</a>
+              <button class="btn btn-secondary btn-sm download-cv-btn" type="button">Download CV</button>
+            </div>
+          </div>
+
+          <!-- Quick Facts Table -->
+          <div class="about-card">
+            <h3 style="font-size: 1.25rem;">Candidate Snapshot</h3>
+            <table class="quick-facts-table">
+              <tbody>
+                <tr>
+                  <td class="fact-label">Full Name</td>
+                  <td class="fact-value">Moinuddin Saiyed</td>
+                </tr>
+                <tr>
+                  <td class="fact-label">Current Degree</td>
+                  <td class="fact-value">B.Tech CE (JG University)</td>
+                </tr>
+                <tr>
+                  <td class="fact-label">Diploma</td>
+                  <td class="fact-value">Diploma in CE (LJ University)</td>
+                </tr>
+                <tr>
+                  <td class="fact-label">Location</td>
+                  <td class="fact-value">Vatva, Ahmedabad, Gujarat, India</td>
+                </tr>
+                <tr>
+                  <td class="fact-label">Specialization</td>
+                  <td class="fact-value">Software Development & Operations</td>
+                </tr>
+                <tr>
+                  <td class="fact-label">Spoken Languages</td>
+                  <td class="fact-value">English, Hindi, Gujarati</td>
+                </tr>
+                <tr>
+                  <td class="fact-label">Availability</td>
+                  <td class="fact-value" style="color: var(--success);">Internships & Full-Time Roles</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- 4 Pillars of Competence -->
+        <div class="pillars-grid">
+          
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h4 class="pillar-title">Computer Engineering</h4>
+            <p class="pillar-desc">
+              Strong grasp of C, C++, Python, Data Structures, Relational DBMS, and modern web application development.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h18v18H3z"></path>
+                <path d="M3 9h18"></path>
+                <path d="M9 21V9"></path>
+              </svg>
+            </div>
+            <h4 class="pillar-title">Store & Inventory Ops</h4>
+            <p class="pillar-desc">
+              Proven competence in inventory reconciliation, tracking shrinkages, restocking schedules, and POS billing.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h4 class="pillar-title">Customer Support & CRM</h4>
+            <p class="pillar-desc">
+              High empathy communication, active listening, dispute resolution, and preserving customer trust.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h4 class="pillar-title">Process Optimization</h4>
+            <p class="pillar-desc">
+              Passionate about identifying operational bottlenecks and implementing digital spreadsheets to automate workflows.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION SECTION
+         ========================================================================== -->
+    <section id="education" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">Academic Background</div>
+          <h2 class="section-title">Education & Qualifications</h2>
+          <p class="section-subtitle">
+            Formal technical education at JG University and LJ University, establishing rigorous engineering and practical problem-solving foundations.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Education Card 1: JG University (B.Tech) -->
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="pill-period">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Pursuing Undergraduate Degree</span>
+              </span>
+              <span class="pill-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>JG University, Ahmedabad, Gujarat</span>
+              </span>
+            </div>
+
+            <h3 class="card-main-title">Bachelor of Technology (B.Tech) in Computer Engineering</h3>
+            <div class="card-subtitle">JG University</div>
+            
+            <p class="card-description">
+              Comprehensive engineering coursework covering computational mathematics, software design patterns, algorithm optimization, database architecture, and computer systems.
+            </p>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">
+                Key Coursework & Lab Focus:
+              </div>
+              <div class="tags-row" style="border-top: none; padding-top: 0;">
+                <span class="tag">Data Structures & Algorithms</span>
+                <span class="tag">Object-Oriented Programming (C++/Java)</span>
+                <span class="tag">Database Management Systems (SQL)</span>
+                <span class="tag">Web Technologies & Frameworks</span>
+                <span class="tag">Operating Systems</span>
+                <span class="tag">Software Engineering Principles</span>
+              </div>
+            </div>
+
+            <ul class="checklist">
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Active participant in university technical seminars, programming workshops, and lab presentations.</span>
+              </li>
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Collaborating on practical software applications that solve campus and business administrative challenges.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Education Card 2: LJ University (Diploma) -->
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="pill-period" style="background: rgba(16, 185, 129, 0.12); color: #10B981;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Successfully Completed</span>
+              </span>
+              <span class="pill-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>LJ University, Ahmedabad, Gujarat</span>
+              </span>
+            </div>
+
+            <h3 class="card-main-title">Diploma in Computer Engineering</h3>
+            <div class="card-subtitle">LJ University (L.J. Polytechnic / Institute of Technology)</div>
+            
+            <p class="card-description">
+              Hands-on technical diploma program that established practical foundations in computer hardware, programming fundamentals (C/C++), web development, relational database schemas, and networking essentials.
+            </p>
+
+            <div style="margin-bottom: 1rem;">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">
+                Foundational Coursework & Practical Labs:
+              </div>
+              <div class="tags-row" style="border-top: none; padding-top: 0;">
+                <span class="tag">Fundamentals of Programming</span>
+                <span class="tag">C & C++ Programming</span>
+                <span class="tag">Database Concepts & SQL</span>
+                <span class="tag">HTML, CSS & Web Basics</span>
+                <span class="tag">Computer Hardware & Networking</span>
+                <span class="tag">Laboratory Practicals</span>
+              </div>
+            </div>
+
+            <ul class="checklist">
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Completed extensive laboratory practicals, software mini-projects, and technical viva examinations.</span>
+              </li>
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Built the solid technical base that paved the way for advanced B.Tech studies at JG University.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Education Card 2: Higher Secondary -->
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="pill-period">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Completed</span>
+              </span>
+              <span class="pill-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Ahmedabad, Gujarat, India</span>
+              </span>
+            </div>
+
+            <h3 class="card-main-title">Higher Secondary Education (12th / HSC)</h3>
+            <div class="card-subtitle">Science & Mathematics Stream</div>
+            
+            <p class="card-description">
+              Formative education emphasizing analytical rigor, calculus, computer science concepts, and systematic inquiry.
+            </p>
+
+            <div class="tags-row" style="border-top: none; padding-top: 0;">
+              <span class="tag">Mathematics</span>
+              <span class="tag">Physics</span>
+              <span class="tag">Chemistry</span>
+              <span class="tag">Computer Science</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPERIENCE SECTION
+         ========================================================================== -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">Track Record</div>
+          <h2 class="section-title">Work Experience & Operations</h2>
+          <p class="section-subtitle">
+            Practical professional experience in commercial store operations, customer relationship management, and inventory logistics.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Experience Card 1: Store Management -->
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="pill-period">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Practical Professional Experience</span>
+              </span>
+              <span class="pill-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Retail & Commercial Operations • Ahmedabad, Gujarat</span>
+              </span>
+            </div>
+
+            <h3 class="card-main-title">Operations Associate & Store Management</h3>
+            <div class="card-subtitle">Retail Store Logistics & Business Coordination</div>
+
+            <p class="card-description">
+              Held direct accountability for daily store floor operations, stock reconciliation, customer issue resolution, and electronic POS billing. Acted as key liaison between wholesale vendors, floor staff, and customers.
+            </p>
+
+            <ul class="checklist">
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Inventory Auditing & Control:</strong> Conducted weekly physical stock counts, logged inbound shipments, minimized product shrinkage, and avoided stock-outs.</span>
+              </li>
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Customer Relationship Management (CRM):</strong> Managed front-facing customer inquiries, resolved product exchanges, and maintained high customer satisfaction scores.</span>
+              </li>
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Billing & Cash Flow Handling:</strong> Processed digital POS payments, cash receipts, and end-of-day transaction settlements with 100% accounting accuracy.</span>
+              </li>
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Digital Spreadsheet Automation:</strong> Developed custom Microsoft Excel tracking sheets for fast stock indexing, saving up to 60% of manual counting time.</span>
+              </li>
+            </ul>
+
+            <div class="tags-row">
+              <span class="tag">Store Management</span>
+              <span class="tag">Inventory Logistics</span>
+              <span class="tag">Customer Relationship Management</span>
+              <span class="tag">Vendor Coordination</span>
+              <span class="tag">POS Billing</span>
+              <span class="tag">Advanced Excel</span>
+            </div>
+          </div>
+
+          <!-- Experience Card 2: Academic & Lab Leadership -->
+          <div class="timeline-card">
+            <div class="card-meta">
+              <span class="pill-period">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Academic Project Leadership</span>
+              </span>
+              <span class="pill-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>JG University Engineering Labs</span>
+              </span>
+            </div>
+
+            <h3 class="card-main-title">Engineering Project Coordinator</h3>
+            <div class="card-subtitle">Student Technical Collaborations</div>
+
+            <p class="card-description">
+              Spearheaded student development groups for course-mandated software projects. Coordinated database design, module testing, and system documentation.
+            </p>
+
+            <ul class="checklist">
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Organized sprint tasks and repository commits for team database and web application projects.</span>
+              </li>
+              <li class="check-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Presented project demonstrations, architecture flowcharts, and user guides to faculty evaluation panels.</span>
+              </li>
+            </ul>
+
+            <div class="tags-row">
+              <span class="tag">Team Coordination</span>
+              <span class="tag">Technical Documentation</span>
+              <span class="tag">System Design</span>
+              <span class="tag">Git Collaboration</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS SECTION
+         ========================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">Capabilities</div>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">
+            A versatile toolkit combining computer engineering languages, commercial operations skills, and productivity suites.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn skill-filter-btn active" data-filter="all">All Disciplines</button>
+          <button class="filter-btn skill-filter-btn" data-filter="technical">Programming & Technical</button>
+          <button class="filter-btn skill-filter-btn" data-filter="operations">Store & Operations</button>
+          <button class="filter-btn skill-filter-btn" data-filter="tools">Software & Tools</button>
+          <button class="filter-btn skill-filter-btn" data-filter="soft">Core Strengths</button>
+        </div>
+
+        <!-- Category 1: Technical & Programming -->
+        <div class="skills-category-group" data-category="technical">
+          <h3 class="category-title">
+            <span class="category-dot"></span>
+            <span>Programming & Technical Engineering</span>
+          </h3>
+          <div class="skills-grid">
+            
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <h4 class="skill-name">C & C++ Programming</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6"></path><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                </div>
+                <span class="skill-badge">Intermediate</span>
+              </div>
+              <h4 class="skill-name">Python</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 80%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+                <span class="skill-badge">Intermediate</span>
+              </div>
+              <h4 class="skill-name">SQL & Databases (DBMS)</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>82%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 82%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <span class="skill-badge">Advanced</span>
+              </div>
+              <h4 class="skill-name">HTML5 & CSS3</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </div>
+                <span class="skill-badge">Intermediate</span>
+              </div>
+              <h4 class="skill-name">JavaScript (ES6+)</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>78%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 78%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                </div>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <h4 class="skill-name">Git & Version Control</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>82%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 82%;"></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category 2: Store & Operations -->
+        <div class="skills-category-group" data-category="operations">
+          <h3 class="category-title">
+            <span class="category-dot"></span>
+            <span>Store Management & Operations</span>
+          </h3>
+          <div class="skills-grid">
+            
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"></path><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+                </div>
+                <span class="skill-badge">Experienced</span>
+              </div>
+              <h4 class="skill-name">Store Inventory Management</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>92%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 92%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                </div>
+                <span class="skill-badge">Experienced</span>
+              </div>
+              <h4 class="skill-name">Stock Audits & Reconciliation</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <span class="skill-badge">Experienced</span>
+              </div>
+              <h4 class="skill-name">Customer Relationship (CRM)</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                </div>
+                <span class="skill-badge">Experienced</span>
+              </div>
+              <h4 class="skill-name">POS Billing & Cash Handling</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category 3: Tools & Software -->
+        <div class="skills-category-group" data-category="tools">
+          <h3 class="category-title">
+            <span class="category-dot"></span>
+            <span>Productivity Tools & Software</span>
+          </h3>
+          <div class="skills-grid">
+            
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+                </div>
+                <span class="skill-badge">Advanced</span>
+              </div>
+              <h4 class="skill-name">Microsoft Excel (Formulas & Data)</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <span class="skill-badge">Proficient</span>
+              </div>
+              <h4 class="skill-name">VS Code & Developer IDEs</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                </div>
+                <span class="skill-badge">Advanced</span>
+              </div>
+              <h4 class="skill-name">Google Workspace (Docs/Sheets)</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>90%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Category 4: Soft Skills -->
+        <div class="skills-category-group" data-category="soft">
+          <h3 class="category-title">
+            <span class="category-dot"></span>
+            <span>Core Professional Strengths</span>
+          </h3>
+          <div class="skills-grid">
+            
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <span class="skill-badge">High</span>
+              </div>
+              <h4 class="skill-name">Analytical Problem Solving</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>92%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 92%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <span class="skill-badge">High</span>
+              </div>
+              <h4 class="skill-name">Customer Communication</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>94%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-top">
+                <div class="skill-icon-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <span class="skill-badge">High</span>
+              </div>
+              <h4 class="skill-name">Time & Priority Management</h4>
+              <div>
+                <div class="progress-info">
+                  <span>Competency</span>
+                  <span>88%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS SECTION
+         ========================================================================== -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">Portfolio Showcase</div>
+          <h2 class="section-title">Projects & Applications</h2>
+          <p class="section-subtitle">
+            Engineered software systems addressing inventory operations, student portals, and customer feedback workflows.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-tabs">
+          <button class="filter-btn project-filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn project-filter-btn" data-filter="operations">Operations & Full Stack</button>
+          <button class="filter-btn project-filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn project-filter-btn" data-filter="business">Business Software</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: Inventory Management -->
+          <article class="project-card" data-category="operations">
+            <div class="project-image-box">
+              <div class="project-vector-illustration" aria-label="Inventory Management UI Banner">
+                <svg class="illustration-svg" viewBox="0 0 400 225" fill="none">
+                  <rect width="400" height="225" fill="#0c1624"/>
+                  <path d="M0 45 H400 M0 90 H400 M0 135 H400 M0 180 H400 M80 0 V225 M160 0 V225 M240 0 V225 M320 0 V225" stroke="#1e3a60" stroke-width="0.7" opacity="0.3"/>
+                  <rect x="35" y="30" width="330" height="165" rx="12" fill="#142B49" stroke="#4A90E2" stroke-width="1.5"/>
+                  <rect x="35" y="30" width="330" height="32" rx="12" fill="#10233d"/>
+                  <circle cx="55" cy="46" r="4" fill="#EF4444"/>
+                  <circle cx="70" cy="46" r="4" fill="#F59E0B"/>
+                  <circle cx="85" cy="46" r="4" fill="#10B981"/>
+                  <text x="105" y="50" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#93c5fd">STORE INVENTORY CONSOLE</text>
+                  <rect x="55" y="78" width="85" height="50" rx="8" fill="#0d1b2e" stroke="#2c5d9a" stroke-width="1"/>
+                  <text x="65" y="96" font-family="'Inter', sans-serif" font-size="8" fill="#94A3B8">TOTAL STOCK</text>
+                  <text x="65" y="116" font-family="'Poppins', sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">14,820</text>
+                  <rect x="155" y="78" width="85" height="50" rx="8" fill="#0d1b2e" stroke="#2c5d9a" stroke-width="1"/>
+                  <text x="165" y="96" font-family="'Inter', sans-serif" font-size="8" fill="#94A3B8">REORDER ALERTS</text>
+                  <text x="165" y="116" font-family="'Poppins', sans-serif" font-size="14" font-weight="700" fill="#4A90E2">03 Low</text>
+                  <rect x="255" y="78" width="85" height="50" rx="8" fill="#0d1b2e" stroke="#2c5d9a" stroke-width="1"/>
+                  <text x="265" y="96" font-family="'Inter', sans-serif" font-size="8" fill="#94A3B8">ACCURACY</text>
+                  <text x="265" y="116" font-family="'Poppins', sans-serif" font-size="14" font-weight="700" fill="#10B981">99.8%</text>
+                  <rect x="55" y="145" width="285" height="32" rx="6" fill="#0d1b2e"/>
+                  <path d="M70 152 V170 M75 152 V170 M82 152 V170 M86 152 V170 M94 152 V170 M100 152 V170 M108 152 V170 M116 152 V170" stroke="#4A90E2" stroke-width="2"/>
+                  <text x="135" y="165" font-family="'Inter', sans-serif" font-size="9" fill="#CBD5E1">BARCODE VERIFIED: SKU-849204-INVENTORY</text>
+                </svg>
+              </div>
+              <div class="project-overlay-badge">Flagship Project</div>
+              <div class="project-category-badge">Operations & Full Stack</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Smart Store & Inventory Management System</h3>
+                <div class="project-subtitle">Automated Stock & Shipment Tracking Portal</div>
+                <p class="project-desc">
+                  Replaces manual paper logbooks with a centralized inventory software system. Provides real-time stock counts, low-stock threshold triggers, supplier shipment records, and daily sales receipts.
+                </p>
+              </div>
+
+              <div class="tags-row" style="border-top: none; padding-top: 0;">
+                <span class="tag">JavaScript</span>
+                <span class="tag">SQL / DBMS</span>
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">Chart.js</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="modal-trigger-btn" data-project="inventory">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </button>
+                <div class="project-actions">
+                  <a href="https://github.com/moinsaiyad31/smart-inventory-system" target="_blank" rel="noreferrer" class="icon-action-btn" title="GitHub Code" aria-label="GitHub Repository">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="https://example.com/inventory-demo" target="_blank" rel="noreferrer" class="icon-action-btn" title="Live Preview" aria-label="Live Demo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Campus Portal -->
+          <article class="project-card" data-category="web">
+            <div class="project-image-box">
+              <div class="project-vector-illustration" aria-label="Campus Portal UI Banner">
+                <svg class="illustration-svg" viewBox="0 0 400 225" fill="none">
+                  <rect width="400" height="225" fill="#0c1624"/>
+                  <circle cx="200" cy="112" r="100" fill="#4A90E2" opacity="0.15"/>
+                  <rect x="35" y="30" width="330" height="165" rx="12" fill="#142B49" stroke="#4A90E2" stroke-width="1.5"/>
+                  <rect x="35" y="30" width="330" height="32" rx="12" fill="#10233d"/>
+                  <circle cx="55" cy="46" r="4" fill="#4A90E2"/>
+                  <text x="70" y="50" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">JG UNIVERSITY ACADEMIC HUB</text>
+                  <rect x="55" y="75" width="135" height="50" rx="8" fill="#0d1b2e" stroke="#2c5d9a" stroke-width="1"/>
+                  <text x="68" y="93" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#4A90E2">COMPUTER ENGINEERING</text>
+                  <text x="68" y="112" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF">Syllabus & Lab Modules</text>
+                  <rect x="205" y="75" width="135" height="50" rx="8" fill="#0d1b2e" stroke="#2c5d9a" stroke-width="1"/>
+                  <text x="218" y="93" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#10B981">TIMETABLES & EXAMS</text>
+                  <text x="218" y="112" font-family="'Inter', sans-serif" font-size="10" fill="#FFFFFF">Lecture Schedule: Active</text>
+                  <rect x="55" y="138" width="285" height="38" rx="8" fill="#0d1b2e" stroke="#2c5d9a" stroke-width="1"/>
+                  <text x="70" y="156" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#93c5fd">Academic Notice: Lab Evaluations Scheduled</text>
+                  <text x="70" y="168" font-family="'Inter', sans-serif" font-size="8" fill="#94A3B8">Dept of Computer Engineering • JG University, Ahmedabad</text>
+                </svg>
+              </div>
+              <div class="project-overlay-badge">University Project</div>
+              <div class="project-category-badge">Web Development</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">JG University Student & Resource Portal</h3>
+                <div class="project-subtitle">Academic Timetable & Lab Material Hub</div>
+                <p class="project-desc">
+                  An indexed repository enabling Computer Engineering students to download syllabus files, track exam schedules, view lecture notices, and access faculty directories without information fragmentation.
+                </p>
+              </div>
+
+              <div class="tags-row" style="border-top: none; padding-top: 0;">
+                <span class="tag">HTML5 / CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive Design</span>
+                <span class="tag">REST API</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="modal-trigger-btn" data-project="campus">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </button>
+                <div class="project-actions">
+                  <a href="https://github.com/moinsaiyad31/jg-campus-resource-portal" target="_blank" rel="noreferrer" class="icon-action-btn" title="GitHub Code" aria-label="GitHub Repository">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="https://example.com/jg-campus-portal" target="_blank" rel="noreferrer" class="icon-action-btn" title="Live Preview" aria-label="Live Demo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Support Ticketing -->
+          <article class="project-card" data-category="business">
+            <div class="project-image-box">
+              <div class="project-vector-illustration" aria-label="Customer Support Tracker UI Banner">
+                <svg class="illustration-svg" viewBox="0 0 400 225" fill="none">
+                  <rect width="400" height="225" fill="#0c1624"/>
+                  <rect x="35" y="30" width="330" height="165" rx="12" fill="#142B49" stroke="#4A90E2" stroke-width="1.5"/>
+                  <rect x="35" y="30" width="330" height="32" rx="12" fill="#10233d"/>
+                  <circle cx="55" cy="46" r="4" fill="#10B981"/>
+                  <text x="70" y="50" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">SUPPORT TICKETING DASHBOARD</text>
+                  <rect x="55" y="75" width="285" height="30" rx="6" fill="#0d1b2e"/>
+                  <rect x="65" y="83" width="45" height="14" rx="4" fill="#10B981" opacity="0.2"/>
+                  <text x="71" y="93" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#10B981">RESOLVED</text>
+                  <text x="120" y="93" font-family="'Inter', sans-serif" font-size="8.5" fill="#FFFFFF">#TK-1082: Store Exchange Query Reconciled</text>
+                  <text x="295" y="93" font-family="'Inter', sans-serif" font-size="7.5" fill="#94A3B8">15m ago</text>
+                  <rect x="55" y="112" width="285" height="30" rx="6" fill="#0d1b2e"/>
+                  <rect x="65" y="120" width="45" height="14" rx="4" fill="#4A90E2" opacity="0.2"/>
+                  <text x="71" y="130" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#4A90E2">IN REVIEW</text>
+                  <text x="120" y="130" font-family="'Inter', sans-serif" font-size="8.5" fill="#FFFFFF">#TK-1083: Vendor Stock Inbound Clarification</text>
+                  <text x="295" y="130" font-family="'Inter', sans-serif" font-size="7.5" fill="#94A3B8">42m ago</text>
+                  <rect x="55" y="150" width="285" height="28" rx="6" fill="#0d1b2e"/>
+                  <text x="70" y="167" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#F59E0B">SLA Turnaround: 99.4% On-Time Resolution</text>
+                  <text x="255" y="167" font-family="'Inter', sans-serif" font-size="8.5" fill="#10B981">CSAT 4.9/5.0</text>
+                </svg>
+              </div>
+              <div class="project-overlay-badge">Business Solution</div>
+              <div class="project-category-badge">Business Software</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Customer Support & Query Resolution Tracker</h3>
+                <div class="project-subtitle">Client Feedback & Ticket Management System</div>
+                <p class="project-desc">
+                  A software utility built for store and customer support teams to categorize customer complaints, monitor SLA turnaround times, and generate customer satisfaction metrics.
+                </p>
+              </div>
+
+              <div class="tags-row" style="border-top: none; padding-top: 0;">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Analytics</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="modal-trigger-btn" data-project="support">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </button>
+                <div class="project-actions">
+                  <a href="https://github.com/moinsaiyad31/customer-query-tracker" target="_blank" rel="noreferrer" class="icon-action-btn" title="GitHub Code" aria-label="GitHub Repository">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="https://example.com/support-tracker-demo" target="_blank" rel="noreferrer" class="icon-action-btn" title="Live Preview" aria-label="Live Demo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Personal Portfolio Website -->
+          <article class="project-card" data-category="web">
+            <div class="project-image-box">
+              <div class="project-vector-illustration" aria-label="Personal Portfolio Code UI Banner">
+                <svg class="illustration-svg" viewBox="0 0 400 225" fill="none">
+                  <rect width="400" height="225" fill="#0c1624"/>
+                  <rect x="35" y="30" width="330" height="165" rx="12" fill="#142B49" stroke="#4A90E2" stroke-width="1.5"/>
+                  <rect x="35" y="30" width="330" height="32" rx="12" fill="#10233d"/>
+                  <circle cx="55" cy="46" r="4" fill="#EF4444"/>
+                  <circle cx="70" cy="46" r="4" fill="#F59E0B"/>
+                  <circle cx="85" cy="46" r="4" fill="#10B981"/>
+                  <text x="105" y="50" font-family="'Inter', sans-serif" font-size="9" fill="#93c5fd">index.html — Pure Web Standards</text>
+                  <rect x="55" y="75" width="285" height="103" rx="8" fill="#0a1524"/>
+                  <text x="70" y="95" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd">&lt;developer name="Moinuddin Saiyed"&gt;</text>
+                  <text x="85" y="113" font-family="'Courier New', monospace" font-size="8.5" fill="#CBD5E1">education = "JG University &amp; LJ University";</text>
+                  <text x="85" y="130" font-family="'Courier New', monospace" font-size="8.5" fill="#CBD5E1">skills = ["Computer Eng", "Store Operations"];</text>
+                  <text x="85" y="147" font-family="'Courier New', monospace" font-size="8.5" fill="#10B981">status = "Open For Opportunities";</text>
+                  <text x="70" y="165" font-family="'Courier New', monospace" font-size="9" fill="#93c5fd">&lt;/developer&gt;</text>
+                </svg>
+              </div>
+              <div class="project-overlay-badge">Pure Web Standards</div>
+              <div class="project-category-badge">Web Development</div>
+            </div>
+            <div class="project-body">
+              <div>
+                <h3 class="project-title">Moinuddin Saiyed — Official Portfolio</h3>
+                <div class="project-subtitle">Executive Personal Portfolio Website</div>
+                <p class="project-desc">
+                  Built strictly with semantic HTML5, modern CSS3 variables, and clean vanilla JavaScript. Featuring dark mode toggle, animated typing effect, and client-side form validation.
+                </p>
+              </div>
+
+              <div class="tags-row" style="border-top: none; padding-top: 0;">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3 Variables</span>
+                <span class="tag">Vanilla JS</span>
+                <span class="tag">Dark Mode</span>
+              </div>
+
+              <div class="project-footer">
+                <button class="modal-trigger-btn" data-project="portfolio">
+                  <span>Explore Case Study</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </button>
+                <div class="project-actions">
+                  <a href="https://github.com/moinsaiyad31/personal-portfolio" target="_blank" rel="noreferrer" class="icon-action-btn" title="GitHub Code" aria-label="GitHub Repository">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="#home" class="icon-action-btn" title="Live Preview" aria-label="Current Page">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="badge-tag">Communication</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">
+            Open to internships, junior software development roles, store operations positions, and academic collaborations.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left: Information Cards -->
+          <div class="contact-info-card">
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Direct Contact</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">
+                Feel free to send an email, copy my official address, or reach out on professional channels.
+              </p>
+            </div>
+
+            <!-- Email Copy Widget -->
+            <div class="email-copy-box">
+              <div class="email-details">
+                <div class="email-label">Official Email</div>
+                <div class="email-address" id="official-email-text">moinuddinsaiyed.official@gmail.com</div>
+              </div>
+              <button id="copy-email-btn" class="copy-btn" type="button" aria-label="Copy Email Address">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label">Copy</span>
+              </button>
+            </div>
+
+            <!-- Details List -->
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span><strong>Location:</strong> Vatva, Ahmedabad, Gujarat, India</span>
+              </div>
+              <div class="contact-detail-item">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span><strong>University:</strong> JG University, Ahmedabad</span>
+              </div>
+              <div class="contact-detail-item">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span><strong>Status:</strong> Available for Internships & Projects</span>
+              </div>
+            </div>
+
+            <!-- Social Links Group -->
+            <div style="padding-top: 1rem; border-top: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">
+                Social & Professional Profiles
+              </div>
+              <div style="display: flex; gap: 0.75rem;">
+                <a href="https://linkedin.com/in/moinuddin-saiyed" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/moinsaiyad31" target="_blank" rel="noreferrer" class="btn btn-secondary btn-sm" style="flex: 1;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>GitHub (@moinsaiyad31)</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Functional Contact Form -->
+          <div class="contact-form-card">
+            
+            <form id="contact-form" novalidate>
+              <h3 class="form-title">Send a Direct Message</h3>
+
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">
+                    Full Name <span class="required">*</span>
+                  </label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                  <span class="form-error">Please provide your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">
+                    Email Address <span class="required">*</span>
+                  </label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. rahul@example.com" required>
+                  <span class="form-error">Please provide a valid email.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject / Purpose</label>
+                <select id="contact-subject" class="form-select">
+                  <option value="Internship / Job Inquiry">Internship / Job Inquiry</option>
+                  <option value="Store Operations / Business Role">Store Operations / Business Role</option>
+                  <option value="Academic Collaboration">Academic Collaboration (JG University)</option>
+                  <option value="Software Project Discussion">Software Project Discussion</option>
+                  <option value="General Professional Connect">General Professional Connect</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  Your Message <span class="required">*</span>
+                </label>
+                <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Please write your message or requirements here (min 10 characters)..." required></textarea>
+                <span class="form-error">Please enter at least 10 characters.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message to Moinuddin</span>
+              </button>
+            </form>
+
+            <!-- Success State Banner -->
+            <div id="form-success-banner" class="form-success-banner">
+              <div class="success-icon-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.4rem;">Message Sent Successfully!</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 400px;">
+                Thank you for reaching out. Moinuddin Saiyed has received your inquiry and will respond promptly.
+              </p>
+              <button id="send-another-btn" class="btn btn-secondary btn-sm" type="button">
+                Send Another Message
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       CASE STUDY DETAIL MODAL POPUP
+       ========================================================================== -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-header-vector">
+        <div class="modal-header-pattern">
+          <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="modal-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#modal-grid)" />
+          </svg>
+        </div>
+        <div style="z-index: 2; text-align: center; padding: 1.5rem;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(74, 144, 226, 0.2); border: 1px solid rgba(74, 144, 226, 0.4); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem auto; color: #4A90E2;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div>
+          <span id="modal-category" class="badge-tag" style="margin-bottom: 0.5rem;"></span>
+          <h3 id="modal-title" style="font-size: 1.6rem; margin-bottom: 0.25rem;"></h3>
+          <p id="modal-subtitle" style="color: var(--accent-sky); font-weight: 600; font-size: 0.85rem;"></p>
+        </div>
+
+        <div>
+          <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem;">
+            Detailed Summary
+          </div>
+          <p id="modal-desc" style="font-size: 0.9rem; line-height: 1.65; color: var(--text-body);"></p>
+        </div>
+
+        <div class="modal-grid-two">
+          <div class="modal-mini-card">
+            <div class="mini-title mini-problem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <span>Problem Statement</span>
+            </div>
+            <p id="modal-problem" style="font-size: 0.8rem; color: var(--text-body);"></p>
+          </div>
+
+          <div class="modal-mini-card">
+            <div class="mini-title mini-solution">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Engineered Solution</span>
+            </div>
+            <p id="modal-solution" style="font-size: 0.8rem; color: var(--text-body);"></p>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">
+            Core Capabilities
+          </div>
+          <ul id="modal-features" class="checklist"></ul>
+        </div>
+
+        <div>
+          <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">
+            Technologies Applied
+          </div>
+          <div id="modal-tech-tags" class="tags-row" style="border-top: none; padding-top: 0;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="logo-icon" style="background: var(--accent-sky);">MS</div>
+            <div style="display: flex; flex-direction: column;">
+              <span style="font-weight: 700; font-size: 1.15rem; color: #FFFFFF;">Moinuddin Saiyed</span>
+              <span style="font-size: 0.75rem; color: var(--accent-sky-light);">Computer Engineering & Operations</span>
+            </div>
+          </div>
+          <p>
+            B.Tech Computer Engineering student at JG University with practical store management, inventory operations, and customer support experience.
+          </p>
+          <div style="font-size: 0.8rem; color: #94A3B8;">
+            Vatva, Ahmedabad, Gujarat, India
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#education" class="footer-link">Education (JG University)</a></li>
+            <li><a href="#experience" class="footer-link">Work Experience</a></li>
+            <li><a href="#skills" class="footer-link">Skills & Stack</a></li>
+            <li><a href="#projects" class="footer-link">Featured Projects</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <p style="color: #CBD5E1; font-size: 0.85rem; line-height: 1.6; margin-bottom: 1rem;">
+            Always open to conversations regarding software engineering roles, operational coordination, or academic initiatives.
+          </p>
+          <div style="display: flex; gap: 0.6rem;">
+            <a href="https://linkedin.com/in/moinuddin-saiyed" target="_blank" rel="noreferrer" class="social-link" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #FFFFFF;" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://github.com/moinsaiyad31" target="_blank" rel="noreferrer" class="social-link" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #FFFFFF;" aria-label="GitHub (@moinsaiyad31)" title="GitHub: @moinsaiyad31">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="mailto:moinuddinsaiyed.official@gmail.com" class="social-link" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #FFFFFF;" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Moinuddin Saiyed. All rights reserved.
+        </div>
+        <button class="back-to-top-btn" type="button">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Scroll to Top FAB -->
+  <button id="scroll-top-fab" class="scroll-top-fab" type="button" aria-label="Scroll to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
